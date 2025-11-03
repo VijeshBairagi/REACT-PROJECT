@@ -12,6 +12,7 @@ This repository contains multiple React + Vite based mini projects — each focu
 | 3️⃣ | **CreateReact**       | Basic React setup example using Vite and modern JSX.               |
 | 4️⃣ | **passwordGeneraote** | Random password generator using React state and event handling.    |
 | 5️⃣ | **ReactRouter-DOM**   | Routing demo using React Router DOM (nested routes, loader, etc.). |
+| 5️⃣ | **themeSwitcher**     | Theme switcher project with React, Tailwind CSS, and Vite          |
 
 ---
 

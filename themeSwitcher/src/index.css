@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .dark {
+	@apply dark:bg-gray-800 dark:text-white;
+  }
+}
+@custom-variant dark (&:where(.dark, .dark *));
