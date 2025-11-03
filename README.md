@@ -59,7 +59,7 @@ Each project focuses on a different part of the React ecosystem:
 ---
 
 ## 🧑‍💻 Author
-** Vijju Bairagi **
+**Vijju Bairagi**
 
 ---
 
