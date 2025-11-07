@@ -14,6 +14,7 @@ This repository contains multiple React + Vite based mini projects — each focu
 | 5️⃣ | **ReactRouter-DOM**   | Routing demo using React Router DOM (nested routes, loader, etc.). |
 | 6️⃣ | **themeSwitcher**     | Theme switcher project with React, Tailwind CSS, and Vite          |
 | 7️⃣ | **ContextTodoLocal**  | Todo list app using Context API and localStorage for persistence   |
+| 8️⃣ | **ReduxToolKit**      | Redux Toolkit se bana todo app, jo modern Redux state management ke best practices dikhata hai. |
 
 ---
 
@@ -44,8 +45,10 @@ npm run dev
 * ⚡ **Vite**
 * 🧭 **React Router DOM**
 * 🪶 **Context API**
+* 🔄 **State Management (Context API / Redux Toolkit )**
 * 🎨 **CSS / Tailwind CSS**
 * 💻 **JavaScript (ES6+)**
+
 
 --
 ## 🎯 Learning Goals
