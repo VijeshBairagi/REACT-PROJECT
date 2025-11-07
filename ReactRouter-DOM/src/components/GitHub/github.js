@@ -1,5 +1,5 @@
  const githubInfoLoader = async () => {
-    const response = await fetch('https://api.github.com/users/hiteshchoudhary')
+    const response = await fetch('https://api.github.com/users/Vijeshbairagi')
     return response.json()
 }
  
