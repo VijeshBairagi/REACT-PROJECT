@@ -1,8 +1,29 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
+const loadTodosFromLocalStorage = () => {
+  try {
+    const serializatedTodos = localStorage.getItem('todos');
+    if (serializatedTodos) {
+      return JSON.parse(serializatedTodos);
+    }
+    return [];
+  } catch (err) {
+    console.log(err);
+    return [];
+  }
+}
+
+const setLocalStorage = (todos) => {
+  try {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+
 const initialState = {
-  todos: [
-  ]
+  todos: loadTodosFromLocalStorage(),
 };
 
 export const todoSlice = createSlice({
@@ -11,14 +32,17 @@ export const todoSlice = createSlice({
   reducers: {
     addTodo: (state, action) => {
       state.todos.push({ id: nanoid(), text: action.payload, completed: false })
+      setLocalStorage(state.todos)
     },
     removeTodo: (state, action) => {
       state.todos = state.todos.filter(todo => todo.id !== action.payload)
+      setLocalStorage(state.todos)
     },
     toggleTodo: (state, action) => {
       const todo = state.todos.find(todo => todo.id === action.payload);
       if (todo) {
         todo.completed = !todo.completed;
+        setLocalStorage(state.todos)
       }
     },
     updateTodo: (state, action) => {
@@ -26,6 +50,7 @@ export const todoSlice = createSlice({
       const todo = state.todos.find(todo => todo.id === id);
       if (todo) {
         todo.text = text;
+        setLocalStorage(state.todos)
       }
     }
   }
