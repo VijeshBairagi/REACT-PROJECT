@@ -9,7 +9,7 @@ const loadTodosFromLocalStorage = () => {
     return [];
   } catch (err) {
      console.warn("Could not load todos from local storage", err);
-    return [];
+    return []; 
   }
 }
 
@@ -17,7 +17,7 @@ const setLocalStorage = (todos) => {
   try {
     localStorage.setItem('todos', JSON.stringify(todos));
   } catch (err) {
-    console.log(err);
+    console.warn("Could not save todos to local storage", err);
   }
 }
 
